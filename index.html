@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 18th Birthday Sidra! 🎉</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background: #000;
+        }
+        
+        .dancing-script {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1877F2 0%, #FF69B4 15%, #E91E63 30%, #9C27B0 45%, #FFB6C1 60%, #FF1744 75%, #FFC0CB 90%, #1877F2 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .bounce-in {
+            animation: bounceIn 1s ease-out;
+        }
+        
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.3); }
+            50% { opacity: 1; transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .slide-up {
+            animation: slideUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        @keyframes slideUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            animation: sparkle 2s linear infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        
+        .balloon {
+            animation: balloonFloat 4s ease-in-out infinite;
+        }
+        
+        @keyframes balloonFloat {
+            0%, 100% { transform: translateY(0px) rotate(-2deg); }
+            50% { transform: translateY(-30px) rotate(2deg); }
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #1877F2;
+            animation: confettiFall 3s linear infinite;
+        }
+        
+        @keyframes confettiFall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        .gift-box {
+            animation: giftPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes giftPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .heart-beat {
+            animation: heartBeat 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(128, 0, 32, 0.3);
+        }
+        
+        .birthday-cake {
+            animation: cakeGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes cakeGlow {
+            from { filter: drop-shadow(0 0 10px #1877F2); }
+            to { filter: drop-shadow(0 0 20px #FF69B4); }
+        }
+        
+        .age-counter {
+            animation: ageCount 3s ease-out;
+        }
+        
+        @keyframes ageCount {
+            0% { transform: scale(0) rotate(180deg); opacity: 0; }
+            50% { transform: scale(1.2) rotate(0deg); opacity: 1; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+        
+        .equal-height {
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .equal-height .card-content {
+            flex-grow: 1;
+        }
+        
+        .quote-box {
+            background: rgba(128, 0, 32, 0.25);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(128, 0, 32, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 182, 193, 0.3);
+        }
+        
+        .urdu-text {
+            font-family: 'Noto Nastaliq Urdu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            font-size: 1.8rem;
+            line-height: 1.8;
+        }
+        
+        .urdu-title {
+            font-family: 'Noto Nastaliq Urdu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .poetry-container {
+            background: linear-gradient(45deg, rgba(255, 182, 193, 0.3), rgba(255, 105, 180, 0.2), rgba(24, 119, 242, 0.2));
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .poetry-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #1877F2, #FF69B4, #E91E63, #9C27B0, #FFB6C1, #FF1744, #FFC0CB);
+            animation: rainbow-border 4s linear infinite;
+        }
+        
+        @keyframes rainbow-border {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            animation: floating 4s ease-in-out infinite;
+            font-size: 2rem;
+            opacity: 0.7;
+        }
+        
+        .twinkle {
+            animation: twinkle 2s infinite alternate;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .rotate {
+            animation: rotate 10s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .slide-in {
+            animation: slideIn 1s ease-out forwards;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        /* Enhanced flower bloom animation with more variety */
+        .flower {
+            position: absolute;
+            font-size: 2.5rem;
+            animation: flowerBloom 5s ease-in-out infinite;
+            opacity: 0;
+            filter: drop-shadow(0 0 8px rgba(255, 182, 193, 0.6));
+        }
+        
+        @keyframes flowerBloom {
+            0% { 
+                opacity: 0; 
+                transform: scale(0) rotate(0deg) translateY(20px); 
+            }
+            15% { 
+                opacity: 0.7; 
+                transform: scale(0.3) rotate(45deg) translateY(10px); 
+            }
+            30% { 
+                opacity: 1; 
+                transform: scale(0.8) rotate(90deg) translateY(0px); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1.2) rotate(180deg) translateY(-10px); 
+            }
+            70% { 
+                opacity: 1; 
+                transform: scale(1) rotate(270deg) translateY(-5px); 
+            }
+            85% { 
+                opacity: 0.7; 
+                transform: scale(0.5) rotate(315deg) translateY(5px); 
+            }
+            100% { 
+                opacity: 0; 
+                transform: scale(0) rotate(360deg) translateY(20px); 
+            }
+        }
+        
+        /* Added petal fall animation */
+        .petal {
+            position: absolute;
+            font-size: 1.5rem;
+            animation: petalFall 6s ease-in-out infinite;
+            opacity: 0;
+        }
+        
+        @keyframes petalFall {
+            0% { 
+                opacity: 0; 
+                transform: translateY(-20px) rotate(0deg); 
+            }
+            20% { 
+                opacity: 1; 
+                transform: translateY(10px) rotate(90deg); 
+            }
+            80% { 
+                opacity: 1; 
+                transform: translateY(80vh) rotate(270deg); 
+            }
+            100% { 
+                opacity: 0; 
+                transform: translateY(100vh) rotate(360deg); 
+            }
+        }
+        
+        .flower-garden {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+        
+        .maroon-glow {
+            text-shadow: 0 0 20px rgba(128, 0, 32, 0.8);
+        }
+        
+        .maroon-card {
+            background: rgba(128, 0, 32, 0.2);
+            border: 1px solid rgba(128, 0, 32, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .urdu-text {
+                font-size: 1.5rem;
+            }
+            .urdu-title {
+                font-size: 2rem;
+            }
+            .dancing-script {
+                font-size: 3.5rem !important;
+            }
+            .equal-height {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen relative">
+    <!-- Enhanced flower garden with more flowers and petals -->
+    <div class="flower-garden">
+        <div class="flower" style="top: 10%; left: 5%; animation-delay: 0s;">🌸</div>
+        <div class="flower" style="top: 20%; left: 90%; animation-delay: 1s;">🌺</div>
+        <div class="flower" style="top: 40%; left: 15%; animation-delay: 2s;">🌻</div>
+        <div class="flower" style="top: 60%; left: 85%; animation-delay: 3s;">🌷</div>
+        <div class="flower" style="top: 80%; left: 10%; animation-delay: 4s;">🌹</div>
+        <div class="flower" style="top: 30%; left: 70%; animation-delay: 1.5s;">🌼</div>
+        <div class="flower" style="top: 50%; left: 30%; animation-delay: 2.5s;">🌸</div>
+        <div class="flower" style="top: 70%; left: 60%; animation-delay: 3.5s;">🌺</div>
+        <div class="flower" style="top: 15%; left: 45%; animation-delay: 0.8s;">🌻</div>
+        <div class="flower" style="top: 35%; left: 25%; animation-delay: 1.8s;">🌷</div>
+        <div class="flower" style="top: 55%; left: 75%; animation-delay: 2.8s;">🌹</div>
+        <div class="flower" style="top: 75%; left: 35%; animation-delay: 3.8s;">🌼</div>
+        
+        <!-- Added falling petals -->
+        <div class="petal" style="left: 20%; animation-delay: 0s;">🌸</div>
+        <div class="petal" style="left: 40%; animation-delay: 1s;">🌺</div>
+        <div class="petal" style="left: 60%; animation-delay: 2s;">🌸</div>
+        <div class="petal" style="left: 80%; animation-delay: 3s;">🌺</div>
+        <div class="petal" style="left: 10%; animation-delay: 4s;">🌸</div>
+        <div class="petal" style="left: 50%; animation-delay: 2.5s;">🌺</div>
+        <div class="petal" style="left: 70%; animation-delay: 1.5s;">🌸</div>
+        <div class="petal" style="left: 30%; animation-delay: 3.5s;">🌺</div>
+    </div>
+    
+    <!-- Floating Hearts -->
+    <div class="floating-hearts" style="top: 10%; left: 5%; animation-delay: 0s;">💖</div>
+    <div class="floating-hearts" style="top: 20%; left: 90%; animation-delay: 1s;">💖</div>
+    <div class="floating-hearts" style="top: 40%; left: 15%; animation-delay: 2s;">💖</div>
+    <div class="floating-hearts" style="top: 60%; left: 85%; animation-delay: 3s;">💖</div>
+    <div class="floating-hearts" style="top: 80%; left: 10%; animation-delay: 4s;">💖</div>
+    
+    <!-- Updated confetti colors to include light pink and Meta colors -->
+    <div class="fixed inset-0 pointer-events-none z-10">
+        <div class="confetti" style="left: 10%; animation-delay: 0s; background: #1877F2;"></div>
+        <div class="confetti" style="left: 20%; animation-delay: 0.5s; background: #FF69B4;"></div>
+        <div class="confetti" style="left: 30%; animation-delay: 1s; background: #E91E63;"></div>
+        <div class="confetti" style="left: 40%; animation-delay: 1.5s; background: #9C27B0;"></div>
+        <div class="confetti" style="left: 50%; animation-delay: 2s; background: #FFB6C1;"></div>
+        <div class="confetti" style="left: 60%; animation-delay: 0.3s; background: #FF1744;"></div>
+        <div class="confetti" style="left: 70%; animation-delay: 0.8s; background: #FFC0CB;"></div>
+        <div class="confetti" style="left: 80%; animation-delay: 1.3s; background: #FF8A80;"></div>
+        <div class="confetti" style="left: 90%; animation-delay: 1.8s; background: #C51162;"></div>
+    </div>
+    
+    <!-- Sparkles -->
+    <div class="fixed inset-0 pointer-events-none z-5">
+        <div class="sparkle" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+        <div class="sparkle" style="top: 40%; left: 85%; animation-delay: 0.5s;"></div>
+        <div class="sparkle" style="top: 60%; left: 25%; animation-delay: 1s;"></div>
+        <div class="sparkle" style="top: 80%; left: 75%; animation-delay: 1.5s;"></div>
+        <div class="sparkle" style="top: 30%; left: 50%; animation-delay: 2s;"></div>
+    </div>
+    
+    <div class="min-h-screen flex flex-col items-center justify-center p-4 relative z-20">
+        <!-- Main Birthday Card -->
+        <div class="max-w-4xl w-full">
+            <!-- Header Section -->
+            <div class="text-center mb-12">
+                <div class="bounce-in pulse">
+                    <h1 class="dancing-script text-6xl md:text-8xl font-bold text-white maroon-glow mb-4">
+                        Happy Birthday
+                    </h1>
+                    <h2 class="dancing-script text-5xl md:text-7xl font-bold text-pink-200 text-glow mb-6">
+                        Sidra! 🎉
+                    </h2>
+                </div>
+                
+                <div class="slide-up" style="animation-delay: 0.5s;">
+                    <div class="inline-flex items-center justify-center space-x-4 maroon-card backdrop-blur-lg rounded-full px-8 py-4 mb-8">
+                        <span class="text-2xl">🎂</span>
+                        <div class="age-counter text-4xl font-bold text-white">18</div>
+                        <span class="text-2xl">🎈</span>
+                    </div>
+                </div>
+                
+                <div class="slide-up" style="animation-delay: 1s;">
+                    <p class="text-xl md:text-2xl text-white/90 mb-2">
+                        August 20, 2007 - August 20, 2025
+                    </p>
+                    <p class="text-lg text-pink-200">
+                        Celebrating 18 amazing years! ✨
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Birthday Elements -->
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Birthday Cake -->
+                <div class="slide-up card-hover equal-height" style="animation-delay: 1.2s;">
+                    <div class="maroon-card backdrop-blur-lg rounded-2xl p-8 text-center flex flex-col h-full">
+                        <div class="card-content">
+                            <div class="birthday-cake text-6xl mb-4">🎂</div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Make a Wish!</h3>
+                            <p class="text-white/80">
+                              Make a wish, not for the world to change, but for your soul to bloom in its own light
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gift Box -->
+                <div class="slide-up card-hover equal-height" style="animation-delay: 1.4s;">
+                    <div class="maroon-card backdrop-blur-lg rounded-2xl p-8 text-center flex flex-col h-full">
+                        <div class="card-content">
+                            <div class="gift-box text-6xl mb-4">🎁</div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Special Gift</h3>
+                            <p class="text-white/80">
+                               My gift to you is love, care, and prayers that never fade
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Balloons -->
+                <div class="slide-up card-hover equal-height" style="animation-delay: 1.6s;">
+                    <div class="maroon-card backdrop-blur-lg rounded-2xl p-8 text-center flex flex-col h-full">
+                        <div class="card-content">
+                            <div class="balloon text-6xl mb-4">🎈🎈🎈</div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Celebrate!</h3>
+                            <p class="text-white/80">
+                                Celebrate today, because your smile is the reason my world feels alive
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Personal Message -->
+            <div class="slide-up" style="animation-delay: 1.8s;">
+                <div class="maroon-card backdrop-blur-lg rounded-3xl p-8 md:p-12 text-center mb-12">
+                    <div class="heart-beat text-4xl mb-6">💖</div>
+                    <h3 class="dancing-script text-4xl md:text-5xl font-bold text-white mb-6">
+                        Dear Sidra,
+                    </h3>
+                    <div class="text-lg md:text-xl text-white/90 leading-relaxed space-y-4">
+                        <p>
+                           On this special day, I want to send you prayers wrapped in love. 🌟 Eighteen is not just an age, it is the doorway to dreams yet to bloom. I pray that even the wishes left incomplete today will find their time and become true when your Time is ready. May your laughter heal every silence, may your eyes hold endless peace, and may your journey be written in beauty. You are the light I carry quietly within, and me is brighter because of you.
+                        </p>
+                        
+                        <p class="text-2xl font-semibold text-pink-200">
+                            Wishing you the happiest 18th birthday ever! 🎉✨
+                        </p>
+                        <p class="text-xl font-bold text-yellow-200 mt-6">
+                            
+                            With love and best wishes,<br>
+                            💖 From Ahsan💖
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Heart Touching Urdu Poetry -->
+            <div class="slide-up" style="animation-delay: 2s;">
+                <div class="poetry-container mb-12">
+                    <h3 class="urdu-title text-center text-white mb-10">
+                        💖 دل سے دعائیں اور پیار 💖
+                    </h3>
+                    <div class="space-y-8">
+                        <div class="quote-box p-6">
+                            <p class="text-center urdu-text text-yellow-200">
+                                یہ بےخودی یہ لبوں کی ہنسی مبارک ہو
+                                تمہیں یہ سالگرہ کی خوشی مبارک ہو
+                            </p>
+                        </div>
+                        
+                        <div class="quote-box p-6">
+                            <p class="text-center urdu-text text-yellow-200">
+                                تمہاری مسکانوں سے رُشک ہو چاند تارے<br>
+                                تمہاری باتوں میں ہے مٹھاس شہد سے پیاری<br>
+                                خدا کرے کہ ملے وہ سب کچھ جس کا ہے ارمان<br>
+                                ہر پل خوشیوں سے بھرپور رہے تمہاری دنیا
+                            </p>
+                        </div>
+                        
+                        <div class="quote-box p-6">
+                            <p class="text-center urdu-text text-yellow-200">
+                                سدرہ تمہیں مبارک ہو یہ دن<br>
+                                چمکے ستاروں سے بھی زیادہ تمہارا چہرہ<br>
+                                خدا کرے کہ ملے وہ سب کچھ جس کا ہے ارمان<br>
+                                ہر پل خوشیوں سے بھرپور رہے تمہاری دنیا
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-8">
+                        <div class="text-4xl animate-pulse">✨💖✨</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Our Laughter & Memories Section -->
+            <div class="slide-up" style="animation-delay: 2.2s;">
+                <div class="maroon-card backdrop-blur-lg rounded-2xl p-8 mb-12">
+                    <h3 class="text-3xl font-bold text-white text-center mb-8">
+                        😂 Our Laughter & Memories 💖
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white/10 rounded-xl p-6">
+                            <div class="text-4xl mb-4">🤣</div>
+                            <h4 class="text-2xl font-bold text-pink-200 mb-3">Daily Dose of Laughter</h4>
+                            <p class="text-white/90">
+                                Remember all those times we couldn't stop laughing at the silliest memes? 
+                                From cat videos to absurd TikToks, our shared sense of humor always brightens the day!
+                            </p>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-6">
+                            <div class="text-4xl mb-4">🎭</div>
+                            <h4 class="text-2xl font-bold text-pink-200 mb-3">Inside Jokes</h4>
+                            <p class="text-white/90">
+                                Those moments when we'd just look at each other and burst out laughing 
+                                because of some random inside joke no one else would understand!
+                            </p>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-6">
+                            <div class="text-4xl mb-4">📱</div>
+                            <h4 class="text-2xl font-bold text-pink-200 mb-3">Meme Wars</h4>
+                            <p class="text-white/90">
+                                Our never-ending competition to find the funniest, most ridiculous memes 
+                                to send each other at random hours of the day!
+                            </p>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-6">
+                            <div class="text-4xl mb-4">💫</div>
+                            <h4 class="text-2xl font-bold text-pink-200 mb-3">Unforgettable Moments</h4>
+                            <p class="text-white/90">
+                                All those spontaneous moments of joy and laughter that made ordinary days 
+                                feel extraordinary. Here's to many more!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Birthday Stats -->
+            <div class="slide-up" style="animation-delay: 2.4s;">
+                <div class="maroon-card backdrop-blur-lg rounded-2xl p-8 mb-12">
+                    <h3 class="text-3xl font-bold text-white text-center mb-8">
+                        🎊 Birthday Stats 🎊
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                        <div class="floating" style="animation-delay: 0s;">
+                            <div class="text-3xl font-bold text-pink-200">18</div>
+                            <div class="text-white/80">Years Old</div>
+                        </div>
+                        <div class="floating" style="animation-delay: 0.5s;">
+                            <div class="text-3xl font-bold text-pink-200">6,570</div>
+                            <div class="text-white/80">Days Lived</div>
+                        </div>
+                        <div class="floating" style="animation-delay: 1s;">
+                            <div class="text-3xl font-bold text-pink-200">157,680</div>
+                            <div class="text-white/80">Hours Lived</div>
+                        </div>
+                        <div class="floating" style="animation-delay: 1.5s;">
+                            <div class="text-3xl font-bold text-pink-200">∞</div>
+                            <div class="text-white/80">Smiles Shared</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Beautiful Quotes -->
+            <div class="slide-up" style="animation-delay: 2.6s;">
+                <div class="maroon-card backdrop-blur-lg rounded-2xl p-8 mb-12">
+                    <h3 class="text-3xl font-bold text-white text-center mb-8">
+                        ✨ Beautiful Quotes for Your Special Day ✨
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="quote-box p-6 text-center">
+                            <div class="text-3xl mb-4">🌟</div>
+                            <p class="text-xl italic text-yellow-200 mb-2">
+                                "Count your life by smiles, not tears. Count your age by friends, not years."
+                            </p>
+                            <p class="text-sm text-white/70">- John Lennon</p>
+                        </div>
+                        <div class="quote-box p-6 text-center">
+                            <div class="text-3xl mb-4">🎂</div>
+                            <p class="text-xl italic text-yellow-200 mb-2 urdu-text">
+                                "ہر سال تمہاری زندگی میں نیا رنگ بھر دے، ہر سال تمہارے خوابوں کو نیا پر لگے۔"
+                            </p>
+                            <p class="text-sm text-white/70">- Anonymous</p>
+                        </div>
+                        <div class="quote-box p-6 text-center">
+                            <div class="text-3xl mb-4">🎂</div>
+                            <p class="text-xl italic text-yellow-200 mb-2">
+                                "A birthday is just another day where you go to work and people give you love. Age is just a state of mind, and you are as old as you think you are."
+                            </p>
+                            <p class="text-sm text-white/70">- Abhishek Bachchan</p>
+                        </div>
+                        <div class="quote-box p-6 text-center">
+                            <div class="text-3xl mb-4">💫</div>
+                            <p class="text-xl italic text-yellow-200 mb-2 urdu-text">
+                                "تمہاری زندگی کے ہر دن میں خوشیاں بکھیریں، تمہارے ہر خواب کو حقیقت بنائیں۔"
+                            </p>
+                            <p class="text-sm text-white/70">- Anonymous</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Birthday Wishes -->
+            <div class="slide-up" style="animation-delay: 2.8s;">
+                <div class="maroon-card backdrop-blur-lg rounded-2xl p-8 mb-12">
+                    <h3 class="text-3xl font-bold text-white text-center mb-8">
+                        🌟 Birthday Wishes for You 🌟
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-3">🌈</div>
+                            <p class="text-white/90">May your life be filled with colors as beautiful as a rainbow</p>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-3">⭐</div>
+                            <p class="text-white/90">May you shine bright like the star you are</p>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-3">🦋</div>
+                            <p class="text-white/90">May you spread your wings and soar to new heights</p>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-3">🌸</div>
+                            <p class="text-white/90">May you bloom beautifully in everything you do</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Special Gifts Section -->
+            <div class="slide-up" style="animation-delay: 3s;">
+                <div class="maroon-card backdrop-blur-lg rounded-2xl p-8 mb-12">
+                    <h3 class="text-3xl font-bold text-white text-center mb-8">
+                        🎁 Special Birthday Gifts for You 🎁
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center p-6 bg-white/10 rounded-xl card-hover">
+                            <div class="gift-box text-5xl mb-4">🎀</div>
+                            <h4 class="text-xl font-bold text-pink-200 mb-2">Gift of Joy</h4>
+                            <p class="text-white/80">May every day bring you reasons to smile and laugh</p>
+                        </div>
+                        <div class="text-center p-6 bg-white/10 rounded-xl card-hover">
+                            <div class="gift-box text-5xl mb-4">💎</div>
+                            <h4 class="text-xl font-bold text-pink-200 mb-2">Gift of Dreams</h4>
+                            <p class="text-white/80">May all your dreams sparkle and come true</p>
+                        </div>
+                        <div class="text-center p-6 bg-white/10 rounded-xl card-hover">
+                            <div class="gift-box text-5xl mb-4">🌟</div>
+                            <h4 class="text-xl font-bold text-pink-200 mb-2">Gift of Success</h4>
+                            <p class="text-white/80">May success follow you in everything you do</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Birthday Surprise Twist -->
+            <div class="slide-up" style="animation-delay: 3.2s;">
+                <div class="bg-gradient-to-r from-blue-500 to-pink-500 hover:from-blue-600 hover:to-pink-600 backdrop-blur-lg rounded-2xl p-8 mb-12 border-2 border-pink-300/30">
+                    <h3 class="text-3xl font-bold text-white text-center mb-8">
+                        🎊 Birthday Surprise! 🎊
+                    </h3>
+                    <div class="text-center">
+                        <div class="text-6xl mb-6 animate-bounce">🎁</div>
+                        <p class="text-xl text-pink-200 mb-6">
+                            Click the mystery box to reveal your special surprise!
+                        </p>
+                        <button onclick="revealSurprise()" id="surpriseBtn" class="bg-gradient-to-r from-blue-500 to-pink-500 hover:from-blue-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg">
+                            🎁 Open Surprise 🎁
+                        </button>
+                        <div id="surpriseContent" class="hidden mt-8 p-6 bg-white/10 rounded-xl">
+                            <div class="text-4xl mb-4">✨🌟✨</div>
+                            <h4 class="text-2xl font-bold text-yellow-200 mb-4">Your Special Message!</h4>
+                            <p class="text-lg text-white/90 mb-4">
+                                Sidra, you are absolutely amazing! Your kindness, your smile, and your wonderful personality 
+                                light up every room you enter. As you turn 18, remember that you have the power to achieve 
+                                anything you set your mind to. The world is yours to explore! 🌍✨
+                            </p>
+                            <div class="text-2xl">🎂🎈🎉💖🌟</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Final Urdu Poetry -->
+            <div class="slide-up" style="animation-delay: 3.4s;">
+                <div class="poetry-container mb-12">
+                    <h3 class="urdu-title text-center text-white mb-10">
+                        💌 آخر میں دل کی بات 💌
+                    </h3>
+                    <div class="space-y-8">
+                        <div class="quote-box p-6">
+                            <p class="text-center urdu-text text-yellow-200">
+                                سدرہ تمہیں مبارک ہو یہ دن<br>
+                                چمکے ستاروں سے بھی زیادہ تمہارا چہرہ<br>
+                                خدا کرے کہ ملے وہ سب کچھ جس کا ہے ارمان<br>
+                                ہر پل خوشیوں سے بھرپور رہے تمہاری دنیا
+                            </p>
+                        </div>
+                        
+                        <div class="quote-box p-6">
+                            <p class="text-center urdu-text text-yellow-200">
+                                تمہاری مسکانوں سے رُشک ہو چاند تارے<br>
+                                تمہاری باتوں میں ہے مٹھاس شہد سے پیاری<br>
+                                خدا کرے کہ ہر خواہش پوری ہو تمہاری<br>
+                                جہاں میں پھیلے خوشبو تمہاری زندگی بھر پیاری
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-8">
+                        <div class="text-4xl animate-pulse">💖🌸💖</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="fade-in text-center" style="animation-delay: 3.6s;">
+                <div class="maroon-card backdrop-blur-lg rounded-2xl p-8">
+                    <div class="text-4xl mb-4">💝</div>
+                    <p class="text-2xl font-bold text-pink-200 mb-4 dancing-script">
+                        Birthday Wishes From Ahsan
+                    </p>
+                    <p class="text-lg text-white/90 mb-4">
+                        A special birthday gift created with love for You
+                    </p>
+                    <div class="quote-box p-4 mb-4">
+                        <p class="text-yellow-200 italic">
+                            "May this new chapter of your life be filled with endless possibilities, 
+                            beautiful moments, and dreams that come true. Happy 18th Birthday, Sidra!"
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center space-x-2 text-white/70">
+                        <span>🎂</span>
+                        <span>August 20, 2025</span>
+                        <span>🎉</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Interactive Birthday Button -->
+    <div class="fixed bottom-8 right-8 z-30">
+        <button onclick="celebrateBirthday()" class="bg-gradient-to-r from-red-800 to-pink-500 hover:from-red-900 hover:to-pink-600 text-white font-bold py-4 px-6 rounded-full shadow-lg transform hover:scale-110 transition-all duration-300 animate-pulse">
+            🎉 Celebrate! 🎉
+        </button>
+    </div>
+    
+    <!-- Celebration Modal -->
+    <div id="celebrationModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-500 z-40">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center transform scale-95 transition-transform duration-500">
+            <div class="text-6xl mb-4">🎊</div>
+            <h3 class="text-3xl font-bold text-gray-800 mb-4">Happy Birthday Sidra!</h3>
+            <p class="text-gray-600 mb-6">Hope your special day is absolutely wonderful!</p>
+            <div class="text-4xl mb-6">🎂🎈🎁</div>
+            <button onclick="closeCelebration()" class="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold py-3 px-8 rounded-full hover:from-pink-600 hover:to-purple-600 transition-all">
+                Thank You! 💖
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function celebrateBirthday() {
+            const modal = document.getElementById('celebrationModal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.querySelector('div').classList.remove('scale-95');
+            modal.querySelector('div').classList.add('scale-100');
+            
+            // Add extra confetti
+            createConfetti();
+            
+            // Add floating hearts and flowers
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.innerHTML = '💖';
+                    heart.className = 'fixed text-2xl pointer-events-none z-10';
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.top = Math.random() * 100 + '%';
+                    heart.style.animation = 'confettiFall 5s linear forwards';
+                    document.body.appendChild(heart);
+                    
+                    setTimeout(() => {
+                        heart.remove();
+                    }, 5000);
+                }, i * 100);
+            }
+            
+            // Add blooming flowers
+            createFlowerBloom();
+        }
+        
+        function closeCelebration() {
+            const modal = document.getElementById('celebrationModal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.querySelector('div').classList.add('scale-95');
+            modal.querySelector('div').classList.remove('scale-100');
+        }
+        
+        function createConfetti() {
+            const colors = ['#1877F2', '#FF69B4', '#E91E63', '#9C27B0', '#FFB6C1', '#FF1744', '#FFC0CB', '#FF8A80', '#C51162', '#F48FB1', '#E1BEE7', '#BBDEFB'];
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDelay = Math.random() * 2 + 's';
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, 3000);
+                }, i * 100);
+            }
+        }
+        
+        function createFlowerBloom() {
+            const flowers = ['🌸', '🌺', '🌻', '🌷', '🌹', '🌼'];
+            
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const flower = document.createElement('div');
+                    flower.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
+                    flower.className = 'fixed text-3xl pointer-events-none z-10';
+                    flower.style.left = Math.random() * 100 + '%';
+                    flower.style.top = Math.random() * 100 + '%';
+                    flower.style.animation = 'flowerBloom 4s ease-in-out forwards';
+                    document.body.appendChild(flower);
+                    
+                    setTimeout(() => {
+                        flower.remove();
+                    }, 4000);
+                }, i * 200);
+            }
+        }
+        
+        function revealSurprise() {
+            const surpriseContent = document.getElementById('surpriseContent');
+            const surpriseBtn = document.getElementById('surpriseBtn');
+            
+            surpriseBtn.style.display = 'none';
+            surpriseContent.classList.remove('hidden');
+            surpriseContent.style.animation = 'bounceIn 1s ease-out';
+            
+            // Trigger extra celebration
+            createConfetti();
+            createFlowerBloom();
+            
+            // Add sparkle effect
+            setTimeout(() => {
+                for (let i = 0; i < 20; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.innerHTML = '✨';
+                    sparkle.className = 'fixed text-2xl pointer-events-none z-10';
+                    sparkle.style.left = Math.random() * 100 + '%';
+                    sparkle.style.top = Math.random() * 100 + '%';
+                    sparkle.style.animation = 'sparkle 2s linear forwards';
+                    document.body.appendChild(sparkle);
+                    
+                    setTimeout(() => {
+                        sparkle.remove();
+                    }, 2000);
+                }
+            }, 500);
+        }
+        
+        // Auto-trigger celebration after page loads
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                createConfetti();
+                createFlowerBloom();
+                document.querySelectorAll('.slide-up').forEach((el, index) => {
+                    el.style.animationDelay = `${index * 0.2 + 0.5}s`;
+                });
+                document.querySelectorAll('.fade-in').forEach((el, index) => {
+                    el.style.animationDelay = `${index * 0.2 + 0.5}s`;
+                });
+            }, 1000);
+        });
+        
+        // Add floating hearts periodically
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.innerHTML = '💖';
+            heart.className = 'fixed text-2xl pointer-events-none z-10';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.bottom = '-50px';
+            heart.style.animation = 'confettiFall 8s linear forwards';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }, 1500);
+        
+        // Add twinkling stars periodically
+        setInterval(() => {
+            const star = document.createElement('div');
+            star.innerHTML = '✨';
+            star.className = 'fixed text-xl pointer-events-none z-5 twinkle';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animation = 'twinkle 2s infinite alternate';
+            document.body.appendChild(star);
+            
+            setTimeout(() => {
+                star.remove();
+            }, 4000);
+        }, 800);
+        
+        setInterval(() => {
+            const flowers = ['🌸', '🌺', '🌻', '🌷', '🌹', '🌼'];
+            const flower = document.createElement('div');
+            flower.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
+            flower.className = 'fixed text-2xl pointer-events-none z-5';
+            flower.style.left = Math.random() * 100 + '%';
+            flower.style.top = Math.random() * 100 + '%';
+            flower.style.animation = 'flowerBloom 4s ease-in-out forwards';
+            document.body.appendChild(flower);
+            
+            setTimeout(() => {
+                flower.remove();
+            }, 4000);
+        }, 2000);
+    </script>
+</body>
+</html>
